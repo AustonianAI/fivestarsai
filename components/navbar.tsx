@@ -9,7 +9,6 @@ import { useTheme } from "next-themes"
 import { ModeToggle } from "@/components/mode-toggle"
 
 import MobileSidebar from "./mobile-sidebar"
-import { Button } from "./ui/button"
 
 export const NAV_ROUTES = [
   { name: "Product", href: "#" },
