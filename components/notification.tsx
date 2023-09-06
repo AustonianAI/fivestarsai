@@ -2,7 +2,7 @@ import { Button } from "./ui/button"
 
 const Notification = () => {
   return (
-    <div className="py-16 sm:py-24">
+    <div className="py-16 sm:py-24" id="connect">
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="relative isolate flex flex-col gap-10 overflow-hidden bg-muted px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 lg:flex-row lg:items-center xl:py-32">
           <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-primary sm:text-4xl xl:max-w-none xl:flex-auto">
@@ -25,13 +25,6 @@ const Notification = () => {
                 Let me know
               </Button>
             </div>
-            <p className="mt-4 text-sm leading-6 text-gray-300">
-              We care about your data. Read our{" "}
-              <a href="#" className="font-semibold text-white">
-                privacy&nbsp;policy
-              </a>
-              .
-            </p>
           </form>
           <svg
             viewBox="0 0 1024 1024"

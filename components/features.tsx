@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { GraduationCap, PencilRuler, Search } from "lucide-react"
 
 const features = [
@@ -5,28 +6,28 @@ const features = [
     name: "AI Generated Ticket Responses",
     description:
       "Use the ticket requester's comments, order history, and your compnay's specific knowledge base, policies, and procedures to generate responses - all while keeping your human agents in control.",
-    href: "#",
+    href: "/#connect",
     icon: PencilRuler,
   },
   {
     name: "Train your AI with your Knoweldge Base",
     description:
       "Use your company's FAQs or knowledge base to train your AI to understand the way your do business. Your AI responses can even cite specific helpful or relevant articles in drafting responses to customers - all powered by vector database search.",
-    href: "#",
+    href: "/#connect",
     icon: GraduationCap,
   },
   {
     name: "Quickly Retrieve Relevant Information",
     description:
       "Let AI review your tickets and retrieve the relevant customer, order, and transaction info before your agents spend any time on the ticket - your human agents do the decision making while AI does the tedious work.",
-    href: "#",
+    href: "/#connect",
     icon: Search,
   },
 ]
 
 const Features = () => {
   return (
-    <div className="bg-secondary py-24 sm:py-32">
+    <div className="bg-secondary py-24 sm:py-32" id="features">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-secondary-foreground text-3xl font-bold tracking-tight sm:text-4xl">
@@ -51,12 +52,12 @@ const Features = () => {
                 <dd className="mt-1 flex flex-auto flex-col text-base leading-7">
                   <p className="flex-auto">{feature.description}</p>
                   <p className="mt-6">
-                    <a
+                    <Link
                       href={feature.href}
                       className="text-sm font-semibold leading-6 text-accent"
                     >
                       Learn more <span aria-hidden="true">→</span>
-                    </a>
+                    </Link>
                   </p>
                 </dd>
               </div>

@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import { Button } from "./ui/button"
 
 const Hero = () => {
@@ -12,9 +14,11 @@ const Hero = () => {
           company&apos;s knowledge base, policies, and best practices - all
           while keeping your human agents in the control.
         </p>
-        <Button className="mt-6" variant="accent">
-          Learn more
-        </Button>
+        <Link href="#connect">
+          <Button className="mt-6" variant="accent">
+            Learn more
+          </Button>
+        </Link>
       </div>
     </div>
   )

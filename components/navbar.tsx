@@ -6,14 +6,12 @@ import Link from "next/link"
 import { Menu } from "lucide-react"
 import { useTheme } from "next-themes"
 
+import MobileSidebar from "@/components/mobile-sidebar"
 import { ModeToggle } from "@/components/mode-toggle"
 
-import MobileSidebar from "./mobile-sidebar"
-
 export const NAV_ROUTES = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "Features", href: "/#features" },
+  { name: "Learn More", href: "/#connect" },
 ]
 
 const Navbar = () => {

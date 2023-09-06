@@ -3,7 +3,12 @@
 import Link from "next/link"
 import { Menu } from "lucide-react"
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 import { NAV_ROUTES } from "@/components/navbar"
 
 const MobileSidebar = () => {
