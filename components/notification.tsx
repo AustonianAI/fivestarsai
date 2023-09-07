@@ -19,32 +19,14 @@ const Notification = () => {
     e.preventDefault()
 
     try {
-      const response = await fetch(
-        "https://api.convertkit.com/v3/forms/5574069/subscribe",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            api_key: "LL87mcbMIpmLgL1uX_p6sw",
-            email: email,
-          }),
-        }
-      )
+      await fetch("/api/notification", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+      })
 
-      const data = await response.json()
-
-      if (response.ok) {
-        setFeedback(
-          "Great - Check your email for a confirmation, and we'll be in touch!"
-        )
-        setEmail("") // Clear the input
-      } else {
-        setFeedback(data.error || "Something went wrong. Please try again.")
-      }
+      setFeedback("Thanks! We'll let you know when we launch.")
     } catch (error) {
-      setFeedback("Error: Unable to connect. Please try again later.")
+      setFeedback("Something went wrong. Please try again.")
     }
   }
 
@@ -74,9 +56,8 @@ const Notification = () => {
                 Let me know
               </Button>
             </div>
-            {feedback && (
-              <div className="mt-4 text-sm leading-6">{feedback}</div>
-            )}
+
+            <div className="mt-4 text-sm leading-6">{feedback}</div>
           </form>
         </div>
       </div>
