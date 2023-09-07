@@ -19,6 +19,15 @@ const Navbar = () => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  console.log("the theme is ", theme)
+
+  const logoPath =
+    theme === "light"
+      ? "/fivestarsai-logo-light.svg"
+      : "/fivestarsai-logo-dark.svg"
+
+  console.log(logoPath)
+
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav
@@ -28,11 +37,7 @@ const Navbar = () => {
         <div className="flex lg:flex-1">
           <Link href="/">
             <Image
-              src={
-                theme === "light"
-                  ? "/fivestarsai-logo-light.svg"
-                  : "/fivestarsai-logo-dark.svg"
-              }
+              src={logoPath}
               width={200}
               height={50}
               alt="FiveStarsAI Logo"
