@@ -19,14 +19,10 @@ const Navbar = () => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  console.log("the theme is ", theme)
-
   const logoPath =
     theme === "light"
       ? "/fivestarsai-logo-light.svg"
       : "/fivestarsai-logo-dark.svg"
-
-  console.log(logoPath)
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
