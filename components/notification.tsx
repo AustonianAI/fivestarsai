@@ -17,6 +17,7 @@ const Notification = () => {
     e: React.FormEvent<HTMLFormElement>
   ): Promise<void> => {
     e.preventDefault()
+    setFeedback("Adding...")
 
     try {
       await fetch("/api/notification", {
